@@ -1,0 +1,70 @@
+# ~/.aerospace.toml
+
+start-at-login = true
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+# --- MULTI-MONITOR WORKSPACE ROUTING ---
+[workspace-to-monitor-force-assignment]
+1 = 'main'      # External
+2 = 'main'
+3 = 'main'
+4 = 'main'
+5 = 'main'
+6 = 'secondary' # Laptop
+7 = 'secondary'
+8 = 'secondary'
+9 = 'secondary'
+
+# --- GAPS ---
+[gaps]
+inner.horizontal = 8
+inner.vertical =   8
+outer.left =       8
+outer.bottom =     8
+outer.top =        8
+outer.right =      8
+
+# --- KEYBINDINGS (Updated to CTRL) ---
+[mode.main.binding]
+
+# Workspace switching (Ctrl + Number)
+ctrl-1 = 'workspace 1'
+ctrl-2 = 'workspace 2'
+ctrl-3 = 'workspace 3'
+ctrl-4 = 'workspace 4'
+ctrl-5 = 'workspace 5'
+ctrl-6 = 'workspace 6'
+ctrl-7 = 'workspace 7'
+ctrl-8 = 'workspace 8'
+ctrl-9 = 'workspace 9'
+
+# Move active window to a workspace (Ctrl + Shift + Number)
+ctrl-shift-1 = 'move-node-to-workspace 1'
+ctrl-shift-2 = 'move-node-to-workspace 2'
+ctrl-shift-3 = 'move-node-to-workspace 3'
+ctrl-shift-4 = 'move-node-to-workspace 4'
+ctrl-shift-5 = 'move-node-to-workspace 5'
+ctrl-shift-6 = 'move-node-to-workspace 6'
+ctrl-shift-7 = 'move-node-to-workspace 7'
+ctrl-shift-8 = 'move-node-to-workspace 8'
+ctrl-shift-9 = 'move-node-to-workspace 9'
+
+# Move focus between windows (Ctrl + Vim keys)
+ctrl-h = 'focus left'
+ctrl-j = 'focus down'
+ctrl-k = 'focus up'
+ctrl-l = 'focus right'
+
+# Move windows around within the current workspace (Ctrl + Shift + Vim keys)
+ctrl-shift-h = 'move left'
+ctrl-shift-j = 'move down'
+ctrl-shift-k = 'move up'
+ctrl-shift-l = 'move right'
+
+# Layout toggles
+ctrl-f = 'fullscreen'
+ctrl-shift-space = 'layout floating tiling'
+
+# Instantly throw the active window to the next monitor
+ctrl-shift-tab = 'move-node-to-monitor --wrap-around next'
